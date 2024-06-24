@@ -5,15 +5,30 @@
     <title>embedded</title>
 </head>
 
-<div id="link">
-    <a href="#" id="start-link">Start Web  Chat from a Link</a>
-</div>
+<body>
+    <div id="link">
+        <a href="#" id="start-link">Start Web  Chat from a Link</a>
+    </div>
+    
+    <div id="button">
+        <button type="button">Start Web Chat from a Button</button>
+    </div>
+    
+    <!--
+    <script data-apikey="w0xRg0TQSYGT5X8WFWZMgg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-el="#button"></script>
+    <script data-apikey="w0xRg0TQSYGT5X8WFWZMgg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-el="#link"></script>
+    -->
 
-<div id="button">
-    <button type="button">Start Web Chat from a Button</button>
-</div>
+    <script>
+    document.getElementById('start-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open('web-chat.html', '_blank'); // Opens the web chat in a new tab
+    });
 
-<script data-apikey="w0xRg0TQSYGT5X8WFWZMgg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-el="#button"></script>
-<script data-apikey="w0xRg0TQSYGT5X8WFWZMgg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js" data-el="#link"></script>
-
+    document.getElementById('start-button').addEventListener('click', function() {
+        window.open('web-chat.html', '_blank'); // Opens the web chat in a new tab
+    });
+    </script>
+    
+</body>
 </html>
